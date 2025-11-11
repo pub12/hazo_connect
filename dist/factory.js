@@ -125,10 +125,6 @@ function createHazoConnect(config) {
             }
         }
     }
-    // Initialize admin service if enabled (only for SQLite)
-    if (type === 'sqlite' && config.enable_admin_ui === true) {
-        (0, admin_service_1.initializeAdminService)({ enable_admin_ui: true });
-    }
     let adapter;
     switch (type) {
         case 'postgrest':

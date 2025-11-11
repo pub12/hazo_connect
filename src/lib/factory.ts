@@ -14,7 +14,7 @@ import { PostgrestAdapter } from './adapters/postgrest-adapter'
 import { SupabaseAdapter } from './adapters/supabase-adapter'
 import { SqliteAdapter } from './adapters/sqlite-adapter'
 import { FileAdapter } from './adapters/file-adapter'
-import { initializeAdminService, registerSqliteAdapter } from './sqlite/admin-service'
+import { registerSqliteAdapter } from './sqlite/admin-service'
 
 // Ensure environment variables from .env.local are loaded before resolving configuration
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
@@ -128,11 +128,6 @@ export function createHazoConnect(config: HazoConnectConfig): HazoConnectAdapter
         }
       }
     }
-  }
-
-  // Initialize admin service if enabled (only for SQLite)
-  if (type === 'sqlite' && config.enable_admin_ui === true) {
-    initializeAdminService({ enable_admin_ui: true })
   }
 
   let adapter: HazoConnectAdapter

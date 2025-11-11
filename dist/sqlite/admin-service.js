@@ -29,6 +29,7 @@ function initializeAdminService(config) {
 /**
  * Register a SQLite adapter instance to be used by the admin service
  * This allows the admin UI to use the same adapter instance as the backend
+ * Registering an adapter also enables the admin UI
  * @param adapter - The SqliteAdapter instance to register
  */
 function registerSqliteAdapter(adapter) {
@@ -37,6 +38,8 @@ function registerSqliteAdapter(adapter) {
     cachedAdapter = adapter;
     // Set a special signature to indicate this is a registered adapter
     cachedConfigSignature = "__registered__";
+    // Enable admin UI when adapter is registered (implies admin UI should be available)
+    adminUiEnabled = true;
 }
 /**
  * Clear the registered adapter (useful for testing)

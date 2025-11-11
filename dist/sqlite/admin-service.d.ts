@@ -59,6 +59,7 @@ export declare function initializeAdminService(config: {
 /**
  * Register a SQLite adapter instance to be used by the admin service
  * This allows the admin UI to use the same adapter instance as the backend
+ * Registering an adapter also enables the admin UI
  * @param adapter - The SqliteAdapter instance to register
  */
 export declare function registerSqliteAdapter(adapter: SqliteAdapter): void;
