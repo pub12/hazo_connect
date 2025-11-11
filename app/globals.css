@@ -1,0 +1,16 @@
+/* globals.css defines base Tailwind layers and root-level tokens for hazo_connect. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base_layer sets foundational styles shared across the library. */
+:root {
+  color-scheme: light;
+}
+
+/* body_reset normalizes default margins and background color. */
+body {
+  margin: 0;
+  background-color: #f8fafc;
+}
+

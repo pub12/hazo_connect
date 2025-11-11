@@ -1,0 +1,26 @@
+// tsconfig.lib.json drives the TypeScript compilation that emits the distributable library artifacts.
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src/lib",
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noEmit": false,
+    "stripInternal": true,
+    "composite": false,
+    "incremental": false
+  },
+  "include": [
+    "src/lib/**/*"
+  ],
+  "exclude": [
+    "src/lib/__tests__/**/*",
+    "tests/**/*"
+  ]
+}
+

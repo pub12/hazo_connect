@@ -1,0 +1,109 @@
+{
+  "name": "hazo_connect",
+  "version": "2.2.0",
+  "description": "Module to connect to the data store (postgres via postgrest, supabase, etc)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "app",
+    "docs",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "default": "./dist/server/index.js"
+    },
+    "./nextjs": {
+      "types": "./dist/nextjs/index.d.ts",
+      "default": "./dist/nextjs/index.js"
+    },
+    "./nextjs/setup": {
+      "types": "./dist/nextjs/setup-helpers.d.ts",
+      "default": "./dist/nextjs/setup-helpers.js"
+    },
+    "./ui": {
+      "types": "./dist/ui/index.d.ts",
+      "default": "./dist/ui/index.js"
+    }
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:lib": "tsc --project tsconfig.lib.json",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build_storybook": "storybook build",
+    "demo:test": "cd apps/test_app && tsx main.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:integration": "POSTGREST_INTEGRATION=true jest --runInBand tests/integration/postgrest.integration.test.ts",
+    "test:integration:sqlite": "jest --runInBand tests/integration/sqlite.integration.test.ts",
+    "prepublishOnly": "npm run build:lib",
+    "postinstall": "patch-package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pub12/hazo_connect.git"
+  },
+  "keywords": [
+    "database",
+    "connection",
+    "postgrest"
+  ],
+  "author": "Pubs Abayasiri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pub12/hazo_connect/issues"
+  },
+  "homepage": "https://github.com/pub12/hazo_connect#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "hazo_config": "^1.3.0",
+    "sql.js": "^1.13.0"
+  },
+  "peerDependencies": {
+    "next": ">=14.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "lucide-react": "^0.553.0",
+    "sonner": "^2.0.7"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.2.6",
+    "@storybook/addon-interactions": "^8.2.6",
+    "@storybook/experimental-nextjs-vite": "^8.6.14",
+    "@storybook/nextjs": "^8.2.6",
+    "@storybook/react": "^8.2.6",
+    "@storybook/test": "^8.2.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/sql.js": "^1.4.9",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
+    "jest": "^30.2.0",
+    "jest-environment-node": "^30.2.0",
+    "lucide-react": "^0.553.0",
+    "next": "14.2.5",
+    "patch-package": "^8.0.1",
+    "postcss": "^8.4.39",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "sonner": "^2.0.7",
+    "storybook": "^8.2.6",
+    "tailwindcss": "^3.4.10",
+    "ts-jest": "^29.4.5",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4"
+  }
+}
