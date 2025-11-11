@@ -1,8 +1,8 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/hazo_connect/api/sqlite/schema/route": "app/hazo_connect/api/sqlite/schema/route.js",
+  "/hazo_connect/sqlite_admin/page": "app/hazo_connect/sqlite_admin/page.js",
   "/hazo_connect/api/sqlite/data/route": "app/hazo_connect/api/sqlite/data/route.js",
-  "/hazo_connect/api/sqlite/tables/route": "app/hazo_connect/api/sqlite/tables/route.js",
-  "/hazo_connect/sqlite_admin/page": "app/hazo_connect/sqlite_admin/page.js"
+  "/hazo_connect/api/sqlite/schema/route": "app/hazo_connect/api/sqlite/schema/route.js",
+  "/hazo_connect/api/sqlite/tables/route": "app/hazo_connect/api/sqlite/tables/route.js"
 }

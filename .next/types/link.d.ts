@@ -30,10 +30,10 @@ declare namespace __next_route_internal_types__ {
 
   type StaticRoutes = 
     | `/`
-    | `/hazo_connect/api/sqlite/schema`
-    | `/hazo_connect/api/sqlite/data`
-    | `/hazo_connect/api/sqlite/tables`
     | `/hazo_connect/sqlite_admin`
+    | `/hazo_connect/api/sqlite/data`
+    | `/hazo_connect/api/sqlite/schema`
+    | `/hazo_connect/api/sqlite/tables`
   type DynamicRoutes<T extends string = string> = never
 
   type RouteImpl<T> = 
