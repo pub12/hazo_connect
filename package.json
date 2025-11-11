@@ -1,6 +1,6 @@
 {
   "name": "hazo_connect",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Module to connect to the data store (postgres via postgrest, supabase, etc)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
